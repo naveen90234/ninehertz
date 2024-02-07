@@ -1,0 +1,75 @@
+#Install firezilla on ubuntu20.04
+  sudo apt update 
+  sudo apt install filezilla 
+  filezilla --version 
+
+#Install postman on ubuntu20.04
+  sudo snap install postman 
+  postman --version
+
+
+#Install VS code on ubuntu20.04
+  sudo snap install --classic code
+  code --version
+
+
+#Install google chrome on ubuntu20.04
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+#Install discord on ubuntu20.04
+  sudo apt install ./discord.deb
+
+
+#Install Mongodb on ubuntu20.04
+  curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+  apt-key list
+  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+  sudo apt update
+  sudo apt install mongodb-org -y
+  sudo systemctl enable --now mongod
+  mongod --version
+
+
+#Mongo-Compass install on ubuntu20.04
+  wget https://downloads.mongodb.com/compass/mongodb-compass_1.39.0_amd64.deb
+  sudo apt install ./mongodb-compass_1.39.0_amd64.deb
+  mongo-compass --version
+
+#Install nodejs18 on ubunu20.04
+   sudo apt update
+   sudo apt install -y curl
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+   sudo apt install -y nodejs
+   node --version
+
+
+#Install Apache2 on ubuntu20.04
+  sudo apt update
+  sudo apt install -y apache2
+   sudo systemctl enable --now apache2
+
+
+#Install Mysql8.0 on ubuntu20.04
+  sudo apt-get update
+  sudo apt-get install -y mysql-server-8.0
+  mysql -V
+  sudo mysql
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+  SELECT user,authentication_string,plugin,host FROM mysql.user;
+  FLUSH PRIVILEGES;
+  exit;
+
+
+#Install Php8.0 on ubuntu20.04
+  sudo apt install php8.0 php8.0-fpm php8.0-mysql php-common php8.0-cli php8.0-common php8.0-opcache php8.0-readline php8.0-mbstring php8.0-xml php8.0-gd php8.0-curl --no-install-recommends -y
+  sudo update-alternatives --config php
+  php -v
+
+#Install phpmyadmin on ubuntu20.04
+  sudo apt install phpmyadmin
+  sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+  sudo a2enconf phpmyadmin.conf
+  sudo systemctl reload apache2.service
+
