@@ -27,7 +27,18 @@
 
 #Install discord on ubuntu20.04
   sudo apt install ./discord.deb
+             or
+ sudo apt install snapd
+ sudo snap install discord
 
+
+#Install sublime text on ubuntu20.04
+  sudo apt install snapd
+  sudo snap install sublime-text –classic
+  subl –version
+
+#Install pycharm on ubuntu20.04
+  sudo snap install pycharm-community --classic
 
 #Install Mongodb on ubuntu20.04
   curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
