@@ -3,6 +3,12 @@
   sudo apt install filezilla 
   filezilla --version 
 
+
+#Install latest filezilla on ubuntu20.04
+  sudo apt-add-repository ppa:tradeb/apps  
+  sudo apt install filezilla
+
+
 #Install postman on ubuntu20.04
   sudo snap install postman 
   postman --version
