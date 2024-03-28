@@ -62,11 +62,25 @@
    sudo apt install -y nodejs
    node --version
 
+#Install Composer On ubuntu20.04
+  sudo apt update
+  sudo apt install php-cli unzip
+  cd ~
+  curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php 
+  HASH=`curl -sS https://composer.github.io/installer.sig`
+  php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+  composer
 
+#Install Nodejs on ubuntu
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo apt install nodejs
+
+  npm install -g pm2
 #Install Apache2 on ubuntu20.04
   sudo apt update
   sudo apt install -y apache2
-   sudo systemctl enable --now apache2
+  sudo systemctl enable --now apache2
 
 
 #Install Mysql8.0 on ubuntu20.04
