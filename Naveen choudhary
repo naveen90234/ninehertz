@@ -5,7 +5,7 @@
 
 
 #Install latest filezilla on ubuntu20.04
-  sudo apt-add-repository ppa:tradeb/apps  
+  sudo apt-add-repository ppa:xtradeb/apps  
   sudo apt install filezilla
 
 
@@ -29,6 +29,20 @@
   echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
   sudo apt update
   sudo apt install anydesk
+
+           or
+serach on goggle chrome :
+https://anydesk.com/en/downloads/linux     ---download debian anydesk package
+sudo dkkg -i anydesk
+
+configataion:
+sudo vim /etc/gdm3/custom.conf
+
+  [daemon]
+    WaylandEnable=false
+    # Enabling automatic login
+    AutomaticLoginEnable=true
+    AutomaticLogin=$USERNAME
 
 
 #Install discord on ubuntu20.04
