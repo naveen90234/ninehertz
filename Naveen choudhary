@@ -44,6 +44,10 @@ sudo vim /etc/gdm3/custom.conf
     AutomaticLoginEnable=true
     AutomaticLogin=$USERNAME
 
+ sudo chown -R $USER:$USER ~/.anydesk
+ sudo systemctl restart anydesk
+ sudo reboot
+
 
 #Install discord on ubuntu20.04
   sudo apt install ./discord.deb
@@ -115,6 +119,20 @@ sudo vim /etc/gdm3/custom.conf
   sudo apt install -y apache2
   sudo systemctl enable --now apache2
 
+
+ **Redirect http to https**
+
+<VirtualHost *:80>
+    #ServerName yourdomain.com
+    #ServerAlias www.yourdomain.com
+
+    # Redirect all traffic to HTTPS
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/?(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+</VirtualHost>
+
+sudo systemctl restart apache2
 
 #Install Mysql8.0 on ubuntu20.04
   sudo apt-get update
