@@ -1,12 +1,12 @@
 #Install firezilla on ubuntu20.04
   sudo apt update 
-  sudo apt install filezilla 
+  sudo apt install filezilla -y
   filezilla --version 
 
 
 #Install latest filezilla on ubuntu20.04
   sudo apt-add-repository ppa:xtradeb/apps  
-  sudo apt install filezilla
+  sudo apt install filezilla -y
 
 
 #Install postman on ubuntu20.04
@@ -96,7 +96,7 @@ sudo vim /etc/gdm3/custom.conf
 
 #Install Composer On ubuntu20.04
   sudo apt update
-  sudo apt install php-cli unzip
+  sudo apt install php-cli unzip curl
   cd ~
   curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php 
   HASH=`curl -sS https://composer.github.io/installer.sig`
