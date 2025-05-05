@@ -5,7 +5,7 @@
 
 
 #Install latest filezilla on ubuntu20.04
-  sudo apt-add-repository ppa:xtradeb/apps  
+  sudo apt-add-repository ppa:xtradeb/apps -y
   sudo apt install filezilla -y
 
 
@@ -162,6 +162,13 @@ sudo systemctl restart apache2
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt-get install -y php8.2 php8.2-cli php8.2-common php8.2-fpm php8.2-mysql php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath libapache2-mod-php8.2 --no-install-recommends
+
+#Install php5.6
+ sudo add-apt-repository ppa:ondrej/php -y
+ sudo apt update -y
+ sudo apt install -y php5.6 libapache2-mod-php5.6 php5.6-mysql php5.6-cli php5.6-fpm --no-install-recommends
+ sudo apt install -y php5.6-intl php5.6-mbstring php5.6-simplexml php5.6-curl php5.6-gd php5.6-bcmath php5.6-zip --no-install-recommends
+ 
 
 #Install phpmyadmin on ubuntu20.04
   sudo apt install phpmyadmin --no-install-recommends -y
