@@ -252,6 +252,30 @@ Alias /phpmyadmin /usr/share/phpmyadmin
 sudo systemctl reload apache2
 
  
+#apache2 conf 
+
+   <VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName staging.cevaheer.com
+    DocumentRoot /var/www/html/build
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    # Laravel API - accessible via /app
+    Alias /cevaheer /var/www/html/cevaheer
+    <Directory /var/www/html/cevaheer>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    <Directory /var/www/html/build>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
 
  
  
