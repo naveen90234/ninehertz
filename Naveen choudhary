@@ -101,13 +101,13 @@ sudo vim /etc/gdm3/custom.conf
   sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
   sudo composer self-update
   composer -v
+---------------------------------------------------------------------------------------------------------------
+#Install Nodejs on ubuntu  (globally)
+  curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+  sudo apt install nodejs -y
 
-#Install Nodejs on ubuntu
-  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt install nodejs
-
-  npm install -g pm2
-
+  sudo npm install -g pm2 (globally)
+--------------------------------------------------------------------------------------------------------------
 #Install Nvm on ubuntu22.04
  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
                                 or
